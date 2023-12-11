@@ -31,9 +31,9 @@ print(data_set)
 library(readxl)
 IMDB_Movie_Data <- read_excel("C:/Users/tanishka/OneDrive/Desktop/End sem projects/R programming/IMDB-Movie-Data.xls")
 View(IMDB_Movie_Data)
-
+#number of rows
 print(nrow(IMDB_Movie_Data))
-
+#number of columns
 print(ncol(IMDB_Movie_Data))
 
 sum(is.na(IMDB_Movie_Data))
@@ -72,3 +72,6 @@ print(table)
 barplot(table,col='blue')
 
 hist(IMDB_Movie_Data$`Runtime (Minutes)`, col='green',main="Runtime of the Movies", xlab="Runtime", ylab = "count")
+
+row_one <- IMDB_Movie_Data[which.max(IMDB_Movie_Data$Votes), ]
+print(row_one)
