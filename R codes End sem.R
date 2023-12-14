@@ -75,3 +75,6 @@ hist(IMDB_Movie_Data$`Runtime (Minutes)`, col='green',main="Runtime of the Movie
 
 row_one <- IMDB_Movie_Data[which.max(IMDB_Movie_Data$Votes), ]
 print(row_one)
+
+row_one <- IMDB_Movie_Data[which.min(IMDB_Movie_Data$Votes), ]
+print(row_one)
