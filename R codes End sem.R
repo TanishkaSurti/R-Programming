@@ -78,3 +78,16 @@ print(row_one)
 
 row_one <- IMDB_Movie_Data[which.min(IMDB_Movie_Data$Votes), ]
 print(row_one)
+
+data=(Dataset$Genre...3)
+genre_table <- table(Dataset$Genre...3)
+genre_df<-as.data.frame(genre_table)
+colnames(genre_df)<-c("Genre", "Count")
+library(ggplot2)
+ggplot(genre_df, aes(x="", y= Count, fill = factor(Genre)))+
+  geom_bar(width = 1, stat="identity")+
+  coord_polar("y")+
+  theme_void()+
+  theme(legend.position = "bottom")+
+  scale_fill_discrete(name = "Genre")+
+  ggtitle("Genre")
